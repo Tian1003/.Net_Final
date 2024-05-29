@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\s1110834035_NetFinal.props" />
+</Project>
