@@ -1,0 +1,65 @@
+﻿@model s1110834035_NetFinal.ViewModels.ImgIndexVM
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        @{
+            int x = 0;
+            foreach (var item in Model.ImgList)
+            {
+                if (x == 0)
+                {
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <img src='@Url.Content("~/images/"+item.ImgF)' class="d-block w-100" alt="...">
+                    </div>
+                }
+                else
+                {
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src='@Url.Content("~/images/"+item.ImgF)' class="d-block w-100" alt="...">
+                    </div>
+                }
+                x++;
+            }
+        }
+    </div>
+
+    
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+
+
+    <div class="row">
+        @if (!Model.ProductList.Count().Equals(0))
+        {
+            foreach (var item in Model.ProductList)
+            {
+                <div class="col-sm-6 col-md-4 col-xl-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="@Url.Content("~/images/"+item.ImgF)">
+                        <div class="card-body">
+                            <h3>@item.Name</h3>
+                            <p>@item.Price</p>
+                            <p>@item.Description</p>
+                            <p>
+                                <a href="#" target="_blank" class="btn btn-primary" role="button">Button</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+
+
+</div>
+

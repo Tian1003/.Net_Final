@@ -49,5 +49,53 @@ namespace s1110834035_NetFinal.Services
             }
             return imgList;
         }
+
+        //取得產品 Product 的資料
+        public List<Product> GetProductList()
+        {
+            //宣告連線變數
+            var conn = (SqlConnection)_dbS.Database.GetDbConnection();
+            //SQL 查詢語句
+            string sql = @" SELECT * FROM Products;";
+            //準備回傳的結構(將表格所有資料串接成一個串列)
+            List<Product> PList = new List<Product>();
+            try
+            {
+                conn.Open(); // 開啟資料庫連線
+                SqlCommand cmd = new SqlCommand(sql, conn); // 執行Sql 指令
+                SqlDataReader dr = cmd.ExecuteReader(); // 取得查詢的資料
+                while (dr.Read()) //獲得下一筆資料, 直到沒有資料
+                {
+                    Product Data = new Product(); //宣告一個暫存單筆資料的結構
+                                                  //將取得的資料存入單筆資料結構
+                    Data.Id = Convert.ToInt32(dr["Id"]);
+                    Data.CategoryId = Convert.ToInt32(dr["CategoryId"]);
+                    Data.Price = Convert.ToDouble
+                    (dr["Price"]);
+                    Data.Name = dr["Name"].ToString();
+                    Data.ImgF = dr["ImgF"].ToString();
+                    // 資料庫允許空值的欄位先確定資料不為空值再轉換
+                    if (!dr["Description"].Equals(DBNull.Value))
+                    {
+                        Data.Description = dr["Description"].ToString();
+                    }
+                    PList.Add(Data); //將單筆資料加入串列中
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message.ToString()); // 丟出錯誤
+            }
+            finally
+            {
+                conn.Close(); // 關閉資料庫連線
+            }
+            return PList;
+        }
+
     }
+
 }
+
+
+

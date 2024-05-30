@@ -5,5 +5,7 @@ namespace s1110834035_NetFinal.ViewModels
     public class ImgIndexVM
     {
         public IEnumerable<ImgCarousel> ImgList { get; set; }
+
+        public IEnumerable<Product> ProductList { get; set; }
     }
 }

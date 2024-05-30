@@ -5,11 +5,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace s1110834035_NetFinal.Controllers
 {
-    public class DrinkTimeController : Controller
+    public class NetFinalController : Controller
     {
         //private readonly AppDbContext _db;
         private readonly DrinkDBService ImgCarService = new DrinkDBService();
-        public DrinkTimeController(AppDbContext db)
+        public NetFinalController(AppDbContext db)
         {
             //_db = db;
             ImgCarService._dbS = db;
@@ -20,6 +20,8 @@ namespace s1110834035_NetFinal.Controllers
             ImgIndexVM Data = new ImgIndexVM();
             //呼叫 Service 的服務, 將回傳的結果指派給ViewModel
             Data.ImgList = ImgCarService.GetImgList();
+
+            Data.ProductList = ImgCarService.GetProductList();
             //傳遞給View
             return View(Data);
         }
