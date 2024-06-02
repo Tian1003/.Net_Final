@@ -33,16 +33,40 @@ namespace s1110834035_NetFinal.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Memo")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DisplayOrder = 1,
+                            Memo = "這是茶",
+                            Name = "茶飲"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            DisplayOrder = 2,
+                            Memo = "這是茶",
+                            Name = "水果茶"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            DisplayOrder = 3,
+                            Memo = "這是咖啡",
+                            Name = "咖啡"
+                        });
                 });
 
             modelBuilder.Entity("s1110834035_NetFinal.Models.ImgCarousel", b =>

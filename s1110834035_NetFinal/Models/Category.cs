@@ -5,7 +5,7 @@ namespace s1110834035_NetFinal.Models
     {
         [Key]
         public int Id { get; set; }
-        [Required(ErrorMessage = "類別名稱必填")]
+        [Required(ErrorMessage = "類別名稱必填")] 
         [MaxLength(30)]
         [Display(Name = "類別名稱")]
         public string Name { get; set; }

@@ -1,0 +1,96 @@
+﻿@model s1110834035_NetFinal.Models.Product
+@{
+ViewData["Title"] = "CatPro";
+Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h3> 新增產品</h3>
+@using (Html.BeginForm("Create", "DrinkTime")) @* 建立新增資料所須的表單*@
+{
+<div class="form-horizontal">
+<hr />
+<div class="form-group">
+<label for="CategoryId" class="control-label col-sm-2"> 類別 </label>
+<div class="col-sm-10">
+<select id="CategoryId" name="CategoryId" class="form-control">
+@foreach (var item in ViewBag.catList)
+{
+if (ViewBag.cid == item.Id)
+{ <option value="@item.Id" selected="selected">@item.Name</option> }
+else
+{ <option value="@item.Id">@item.Name</option> }
+}
+</select>
+</div>
+</div>
+        <div class="form
+-group">
+            <label for="DepId" class="control
+-label col
+-sm
+-2"> 產品名稱 </label>
+            <div class="col
+-sm
+-10">
+                @Html.TextBoxFor(model => model.Name)
+                @Html.ValidationMessageFor(model => model.Name)
+            </div>
+        </div>
+        <div class="form
+-group">
+            <label for="DepId" class="control
+-label col
+-sm
+-2">價格</label>
+            <div class="col
+-sm
+-10">
+                @Html.TextBoxFor(model => model.Price
+                         )
+                @Html.ValidationMessageFor(model => model.Price
+                         )
+            </div>
+        </div>
+        <div class="form
+-group">
+            <label for="DepId" class="control
+-label col
+-sm
+-2">圖片檔案</label>
+            <div class="col
+-sm
+-10">
+                @Html.TextBoxFor(model => model.ImgF)
+                @Html.ValidationMessageFor(model => model.ImgF)
+            </div>
+        </div>
+        <div class="form
+-group">
+            <label for="DepId" class="control
+-label col
+-sm
+-2">說明</label>
+            <div class="col
+-sm
+-10">
+                @Html.TextBoxFor(model => model.Description)
+                @Html.ValidationMessageFor(model => model.Description)
+            </div>
+        </div>
+        <div class="form
+-group">
+            <div class="col
+-sm
+-offset
+-2 col
+-sm
+-10">
+                <input type="submit" value=" 新增產品
+    " />
+            </div>
+        </div>
+    </div>
+}
+<hr />
+<div>
+    @Html.ActionLink("回到列表", "CatPro", new { cid = @ViewBag.cid })
+</div>

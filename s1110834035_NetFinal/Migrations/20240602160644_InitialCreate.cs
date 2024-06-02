@@ -18,9 +18,9 @@ namespace s1110834035_NetFinal.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     DisplayOrder = table.Column<int>(type: "int", nullable: false),
-                    Memo = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Memo = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -55,6 +55,16 @@ namespace s1110834035_NetFinal.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Products", x => x.Id);
+                });
+
+            migrationBuilder.InsertData(
+                table: "Categories",
+                columns: new[] { "Id", "DisplayOrder", "Memo", "Name" },
+                values: new object[,]
+                {
+                    { 1, 1, "這是茶", "茶飲" },
+                    { 2, 2, "這是茶", "水果茶" },
+                    { 3, 3, "這是咖啡", "咖啡" }
                 });
 
             migrationBuilder.InsertData(
