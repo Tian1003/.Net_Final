@@ -1,0 +1,22 @@
+﻿body {
+}
+
+h2 {
+    width: 100%;
+    margin: 10px auto;
+    padding: 5px;
+    border: 5px solid #95dbbd;
+    background -color: #6fbb9a;
+    color: #fff;
+    font -size: 200%;
+    text -align: center;
+    line -height: 1;
+}
+
+h4 {
+    padding: 5px;
+    margin -bottom: 30px;
+    border: 1px dotted #94c8b1;
+    border -left: 10px solid #d0e35b;
+    color: #6fbb9a;
+}

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "P05SKUaJZogc3MlBAXWw+gzdAU47Y/e/PUTU8K3TdCY=",
+  "Hash": "lYN/DGmT46Z8GFgkliO8RwSjVNvNQzrjP1lwNNXJ0t0=",
   "Source": "s1110834035_NetFinal",
   "BasePath": "_content/s1110834035_NetFinal",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\.Net\\Final\\s1110834035_NetFinal\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\s1110834035_NetFinal.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\.Net\\Final\\s1110834035_NetFinal\\wwwroot\\css\\CatProNew.css",
+      "SourceId": "s1110834035_NetFinal",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\.Net\\Final\\s1110834035_NetFinal\\wwwroot\\",
+      "BasePath": "_content/s1110834035_NetFinal",
+      "RelativePath": "css/CatProNew.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\CatProNew.css"
     },
     {
       "Identity": "C:\\.Net\\Final\\s1110834035_NetFinal\\wwwroot\\css\\site.css",

@@ -42,8 +42,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV0RmluYWxcQ2F0UHJvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/.Net/Final/s1110834035_NetFinal/Views/NetFinal/CatProNew.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV0RmluYWxcQ2F0UHJvTmV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/.Net/Final/s1110834035_NetFinal/Views/NetFinal/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV0RmluYWxcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/.Net/Final/s1110834035_NetFinal/Views/NetFinal/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV0RmluYWxcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/.Net/Final/s1110834035_NetFinal/Views/NetFinal/Index.cshtml]

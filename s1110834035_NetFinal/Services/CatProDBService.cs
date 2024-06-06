@@ -106,5 +106,64 @@ namespace s1110834035_NetFinal.Services
                 conn.Close(); // 關閉資料庫連線
             }
         }
+
+        public Product GetProById(int pid)
+        {
+            Product Data = new Product();
+            string sql = $@" SELECT * FROM Products WHERE Id = '{pid}'; "; //Sql 語法
+                                                                           //宣告連線變數
+            var conn = (SqlConnection)_dbS.Database.GetDbConnection();
+            // 確保程式不會因執行錯誤而整個中斷
+            try
+            {
+                conn.Open(); // 開啟資料庫連線
+                SqlCommand cmd = new SqlCommand(sql, conn); // 執行Sql 指令
+                SqlDataReader dr = cmd.ExecuteReader(); // 取得查詢的資料
+                dr.Read(); //只有一筆, 不用迴圈
+                           //將取得的資料存入Product資料結構
+                Data.Id = Convert.ToInt32(dr["Id"]);
+                Data.Name = dr["Name"].ToString();
+                Data.Price = Convert.ToDouble(dr["Price"]);
+                Data.Description = dr["Description"].ToString();
+                Data.CategoryId = Convert.ToInt32(dr["CategoryId"]);
+                Data.ImgF = dr["ImgF"].ToString();
+            }
+            catch (Exception e)
+            {
+                Data = null; // 查無資料
+            }
+            finally
+            {
+                conn.Close(); // 關閉資料庫連線
+            }
+            // 回傳根據編號所取得的資料
+            return Data;
+        }
+        public void UpdatePro(Product UpdateData)
+        { //Sql 修改語法
+            string sql = $@" UPDATE Products SET Name = '{UpdateData.Name}',
+Price ={UpdateData.Price}, Description= '{UpdateData.Description}',
+ImgF = '{UpdateData.ImgF}', CategoryId= {UpdateData.CategoryId}
+where Id = {UpdateData.Id} ";
+            var conn = (SqlConnection)_dbS.Database.GetDbConnection();
+            try // 確保程式不會因執行錯誤而整個中斷
+            {
+                conn.Open(); // 開啟資料庫連線
+                SqlCommand cmd = new SqlCommand(sql, conn); // 執行Sql 指令
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message.ToString()); // 丟出錯誤
+            }
+            finally
+            {
+                conn.Close(); // 關閉資料庫連線
+            }
+        }
+
+
+
     }
+
 }

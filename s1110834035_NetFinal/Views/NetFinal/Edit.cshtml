@@ -1,0 +1,87 @@
+﻿@model s1110834035_NetFinal.Models.Product
+@{
+    ViewData["Title"] = "EditProduct";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>新增產品</h2>
+@* 建立新增資料所須的表單*@
+@using (Html.BeginForm("Edit", "DrinkTime", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="form-horizontal">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="input-group mb-3">
+                </div>
+                <input type="hidden" asp-for="Id" />
+                <div class="input-group mb-3">
+                </div>
+                <div class="input-group mb-3">
+                </div>
+                <div class="input-group mb-3">
+                </div>
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div>
+        <div class="input-group mb-3">
+        </div>
+    </div>
+}
+<div class="input-group mb-3">
+    <span for="CategoryId" class="input-group-text" id="inputGroup-sizing-default">
+        類&emsp;&emsp;別
+    </span>
+    <select id="CategoryId" name="CategoryId" class="form-control">
+        @foreach (var item in ViewBag.catList) //從ViewBag取得類別資料, 產生選單
+        {
+            if (ViewBag.cid == item.Id)
+            {
+                <option value="@item.Id" selected="selected">@item.Name</option>
+            }
+            else
+            {
+                <option value="@item.Id">@item.Name</option>
+            }
+        }
+    </select>
+</div>
+<input type="hidden" asp-for="Id" />
+<div class="input-group mb-3">
+    <span for="Name" class="input-group-text"
+          id="inputGroup-sizing-default">
+        產品名稱
+    </span>
+    <input type="text" asp-for="Name" class="form-control" aria-label="Sizing example input" ariadescribedby="inputGroup-sizing-default">
+</div>
+<div class="input-group mb-3">
+    <span for="Price" class="input-group-text" id="inputGroup-sizing-default">
+        價&emsp;&emsp;格
+    </span>
+    <input type="text" asp-for="Price" class="form-control" aria-label="Sizing example input" ariadescribedby="inputGroup-sizing-default">
+</div>
+<div class="input-group mb-3">
+    <span for="Description" class="input-group-text" id="inputGroup-sizing-default">
+        說&emsp;&emsp;明
+    </span>
+    <input type="text" asp-for="Description" class="form-control" aria-label="Sizing example input" ariadescribedby="inputGroup-sizing-default">
+</div>
+
+<div class="col-md-4">
+    <div class="input-group mb-3">
+        <input type="file" asp-for="ImgF" name="ImgF" id="ImgF"
+               class="form-control-file" aria-label="Sizing example input"
+               aria-describedby="inputGroup-sizing-default"
+               onchange="PreviewImage();" />
+    </div>
+    <img id="preview" src='@Url.Content("~/images/"+Model.ImgF)' class="d-block w-100" alt="..."
+         onerror="imgUserAvatarError(this)">
+    <p>@Model.ImgF</p>
+</div>
+</div>
+<div class="input-group mb-3">
+    <div class="col-sm-offset-2 col-sm-10">
+        <a href="@Url.Action("CatProNew", new {cid = @ViewBag.cid })"
+           class="btn btn-info btn-lg">回到列表</a>
+        <input type="submit" class="btn btn-primary btn-lg" value=" 更新產品" />
+    </div>
+</div>
