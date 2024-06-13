@@ -198,7 +198,26 @@ namespace s1110834035_NetFinal.Services
             }
         }
 
-
+        public void DeleteAlbum(int pid)
+        {
+            try
+            {
+                var albums = _dbS.Albums.Find(pid);
+                if (albums != null)
+                {
+                    _dbS.Albums.Remove(albums);
+                    _dbS.SaveChanges();
+                }
+                else
+                {
+                    throw new Exception("Photo not found.");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error deleting photo: " + ex.Message);
+            }
+        }
 
 
     }

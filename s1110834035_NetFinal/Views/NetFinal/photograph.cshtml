@@ -6,17 +6,19 @@
 <h2>依類別顯示產品</h2>
 <div style="margin-top:3%;" class="row">
     <div class="col-md-3">
-        <h4>我的相簿</h4><hr />
-        @foreach (var item in Model.AlbumList)
-        {
+        <h4 class="album-title">我的相簿</h4><hr />
+        <div class="album-list">
+            @foreach (var item in Model.AlbumList)
+            {
+                <div class="album-item @(ViewBag.CurrentAlbumId == item.Id ? "current-album" : "")">
+                    <a href="@Url.Action("photograph", new { cid = item.Id })" class="album-link">@item.AlbumName</a>
+                    <a href="@Url.Action("DeleteAlbum", new { id = item.Id })" class="btn btn-danger btn-sm album-delete">刪除</a>
+                </div>
+            }
             <p>
-                <a href="@Url.Action("photograph", new { cid = item.Id })">@item.AlbumName </a>
+                <a href="@Url.Action("CreateAlbum")" class="btn btn-success">新增相簿</a>
             </p>
-        }
-
-        <p>
-            <a href="@Url.Action("CreateAlbum")" class="btn btn-success">新增相簿</a>
-        </p>
+        </div>
     </div>
 
     <div class="row col-md-9 g-0">
@@ -51,7 +53,6 @@
             <div class="card add-photo-card" style="position: relative; overflow: hidden; background-color: white; text-align: center; display: flex; align-items: center; justify-content: center; height: 100%;">
                 <a href="@Url.Action("Create", new { cid = Model.SrhId })" class="add-photo-link" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-decoration: none;">
                     <span class="plus-sign" style="font-size: 48px; color: black;">+</span>
-
                     <div class="add-photo-body overlay">
                         <p>新增相片</p>
                     </div>
@@ -62,13 +63,67 @@
 </div>
 
 <style>
+    .album-title {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    .album-list {
+        background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .album-item {
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        position: relative;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .album-link {
+        text-decoration: none;
+        color: white; /* 默認白色文字 */
+        font-size: 1.2em;
+        transition: color 0.3s;
+        display: block;
+    }
+
+        .album-link:hover {
+            color: #007bff; /* 滑過時的藍色 */
+        }
+
+    .current-album {
+        background-color: white; /* 當前相簿白色背景 */
+        color: black !important; /* 當前相簿文字顏色黑色 */
+        font-weight: bold;
+    }
+
+        .current-album .album-link {
+            color: black !important; /* 當前相簿中的連結文字顏色 */
+        }
+
+    .album-delete {
+        display: none;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .album-item:hover .album-delete {
+        display: inline-block;
+    }
+
     .card-body {
         position: absolute;
         bottom: -110%;
         left: 0;
         right: 0;
         background: rgba(0, 0, 0, 0.75); /* 半透明背景 */
-        color: white; /* 文字颜色 */
+        color: white; /* 文字顏色 */
         padding: 20px;
         transition: bottom 0.4s ease-in-out;
         font-weight: bold;
@@ -76,6 +131,21 @@
 
     .card:hover .card-body {
         bottom: 0;
+    }
+
+    .add-photo-card {
+        height: 100%; /* 確保高度與其他卡片一致 */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .add-photo-link {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .add-photo-card:hover {

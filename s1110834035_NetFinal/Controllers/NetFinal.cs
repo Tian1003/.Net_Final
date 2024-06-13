@@ -218,6 +218,13 @@ namespace s1110834035_NetFinal.Controllers
         }
 
 
-
+        public IActionResult DeleteAlbum(int id)
+        {
+            
+                PhotoService.DeleteAlbum(id);
+                return RedirectToAction("photograph");
+            
+            
+        }
     }
 }
