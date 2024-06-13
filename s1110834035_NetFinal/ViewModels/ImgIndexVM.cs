@@ -1,11 +1,16 @@
 ﻿using s1110834035_NetFinal.Models;
+using System.Collections.Generic;
 
 namespace s1110834035_NetFinal.ViewModels
 {
     public class ImgIndexVM
     {
-        public IEnumerable<ImgCarousel> ImgList { get; set; }
+        public List<ImgCarousel> ImgList { get; set; }
+        public List<Photos> PhotoList { get; set; }
+        public List<Albums> AlbumList { get; set; }  // 添加相簿列表
 
-        public IEnumerable<Product> ProductList { get; set; }
+        
     }
+
+   
 }

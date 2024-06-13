@@ -26,6 +26,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\.Net\Final\s1110834035_NetFinal
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/.Net/Final/s1110834035_NetFinal/Views/Account/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/.Net/Final/s1110834035_NetFinal/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/.Net/Final/s1110834035_NetFinal/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/.Net/Final/s1110834035_NetFinal/Views/DrinkTime/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRHJpbmtUaW1lXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -38,16 +50,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/.Net/Final/s1110834035_NetFinal/Views/NetFinal/CatPro.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV0RmluYWxcQ2F0UHJvLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/.Net/Final/s1110834035_NetFinal/Views/NetFinal/CatProNew.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV0RmluYWxcQ2F0UHJvTmV3LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/.Net/Final/s1110834035_NetFinal/Views/NetFinal/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV0RmluYWxcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/.Net/Final/s1110834035_NetFinal/Views/NetFinal/CreateAlbum.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV0RmluYWxcQ3JlYXRlQWxidW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/.Net/Final/s1110834035_NetFinal/Views/NetFinal/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV0RmluYWxcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/.Net/Final/s1110834035_NetFinal/Views/NetFinal/Edit.cshtml]
@@ -56,6 +68,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/.Net/Final/s1110834035_NetFinal/Views/NetFinal/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV0RmluYWxcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/.Net/Final/s1110834035_NetFinal/Views/NetFinal/photograph.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV0RmluYWxccGhvdG9ncmFwaC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/.Net/Final/s1110834035_NetFinal/Views/Shared/Error.cshtml]

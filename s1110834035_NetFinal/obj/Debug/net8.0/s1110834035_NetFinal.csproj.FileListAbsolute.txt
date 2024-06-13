@@ -131,6 +131,7 @@ C:\.Net\Final\s1110834035_NetFinal\obj\Debug\net8.0\s1110834035_NetFinal.csproj.
 C:\.Net\Final\s1110834035_NetFinal\obj\Debug\net8.0\s1110834035_NetFinal.MvcApplicationPartsAssemblyInfo.cache
 C:\.Net\Final\s1110834035_NetFinal\obj\Debug\net8.0\s1110834035_NetFinal.RazorAssemblyInfo.cache
 C:\.Net\Final\s1110834035_NetFinal\obj\Debug\net8.0\s1110834035_NetFinal.RazorAssemblyInfo.cs
+C:\.Net\Final\s1110834035_NetFinal\obj\Debug\net8.0\s1110834035_NetFinal.sourcelink.json
 C:\.Net\Final\s1110834035_NetFinal\obj\Debug\net8.0\staticwebassets.build.json
 C:\.Net\Final\s1110834035_NetFinal\obj\Debug\net8.0\staticwebassets.development.json
 C:\.Net\Final\s1110834035_NetFinal\obj\Debug\net8.0\staticwebassets\msbuild.s1110834035_NetFinal.Microsoft.AspNetCore.StaticWebAssets.props
@@ -147,4 +148,3 @@ C:\.Net\Final\s1110834035_NetFinal\obj\Debug\net8.0\refint\s1110834035_NetFinal.
 C:\.Net\Final\s1110834035_NetFinal\obj\Debug\net8.0\s1110834035_NetFinal.pdb
 C:\.Net\Final\s1110834035_NetFinal\obj\Debug\net8.0\s1110834035_NetFinal.genruntimeconfig.cache
 C:\.Net\Final\s1110834035_NetFinal\obj\Debug\net8.0\ref\s1110834035_NetFinal.dll
-C:\.Net\Final\s1110834035_NetFinal\obj\Debug\net8.0\s1110834035_NetFinal.sourcelink.json

@@ -1,5 +1,8 @@
 ﻿using s1110834035_NetFinal.Models;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Linq;
+
 namespace s1110834035_NetFinal.Data
 {
     public class AppDbContext : DbContext
@@ -7,59 +10,83 @@ namespace s1110834035_NetFinal.Data
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
         }
-        public DbSet<Category> Categories { get; set; }
-        public DbSet<Product> Products { get; set; }
         public DbSet<ImgCarousel> ImgCarousels { get; set; }
-
-
+        public DbSet<Users> Users { get; set; }
+        public DbSet<Albums> Albums { get; set; }
+        public DbSet<Photos> Photos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //Category 欄位資料
-            modelBuilder.Entity<Category>(entity =>
-            {
-                entity.Property(e => e.Name).HasMaxLength(50);
-                entity.Property(e => e.Memo).HasMaxLength(100);
-            });
-
-            //測試資料
-            modelBuilder.Entity<Category>().HasData(
-            new Category { Id = 1, Name = "茶飲", DisplayOrder = 1, Memo = "這是茶" },
-            new Category { Id = 2, Name = "水果茶", DisplayOrder = 2, Memo = "這是茶" },
-            new Category { Id = 3, Name = "咖啡", DisplayOrder = 3, Memo = "這是咖啡" }
-            );
-
-
-            //… (接續上頁
-            //Product 欄位資料
-            //測試資料
-            modelBuilder.Entity<Product>().HasData
-            (
-            new Product{Id = 1,Name = "台灣水果茶",Price = 60,ImgF = "img1.jpg",Description = "天然的最好",CategoryId = 2},
-            new Product{Id = 2,Name = "鐵觀音",Price = 35,ImgF = "img2.jpg",Description = "人生的味道",CategoryId = 1},
-            new Product{Id = 3,Name = "美式咖啡",Price = 50,ImgF = "img1.jpg",Description = "悠閒的時光",CategoryId = 3},
-            new Product{Id = 4,Name = "紅茶",Price = 30,ImgF = "img1.jpg",Description = "發酵與沉澱",CategoryId = 1}
-            );
-
-
-
-            //ImgCarousel欄位資料
+            
+            // ImgCarousel 欄位資料
             modelBuilder.Entity<ImgCarousel>(entity =>
             {
+
                 entity.Property(e => e.Id).HasMaxLength(100);
                 entity.Property(e => e.ImgF).HasMaxLength(100);
             });
 
-            //測試資料
-            modelBuilder.Entity<ImgCarousel>().HasData
-            (
-            new ImgCarousel { Id = 1, ImgF = "part_1.jpg" },
-            new ImgCarousel { Id = 2, ImgF = "part_2.jpg" },
-            new ImgCarousel { Id = 3, ImgF = "part_3.jpg" },
-            new ImgCarousel { Id = 4, ImgF = "part_4.jpg" }
+            // 測試資料
+            modelBuilder.Entity<ImgCarousel>().HasData(
+                new ImgCarousel { Id = 1, ImgF = "part_1.jpg" },
+                new ImgCarousel { Id = 2, ImgF = "part_2.jpg" },
+                new ImgCarousel { Id = 3, ImgF = "part_3.jpg" },
+                new ImgCarousel { Id = 4, ImgF = "part_4.jpg" }
             );
 
+            // Users 欄位資料
+            modelBuilder.Entity<Users>(entity =>
+            {
+                entity.Property(e => e.UserName).IsRequired().HasMaxLength(100);
+                entity.Property(e => e.Email).IsRequired().HasMaxLength(100);
+                entity.Property(e => e.Password).IsRequired().HasMaxLength(100);
+                entity.Property(e => e.RegistrationDate).IsRequired();
+            });
 
+            // Albums 欄位資料
+            modelBuilder.Entity<Albums>(entity =>
+            {
+                entity.Property(e => e.AlbumName).IsRequired().HasMaxLength(100);
+                entity.Property(e => e.Description).IsRequired().HasMaxLength(500);
+                entity.Property(e => e.CreationDate).IsRequired();
+                entity.Property(e => e.UserId).IsRequired();
+            });
+
+            // Photos 欄位資料
+            modelBuilder.Entity<Photos>(entity =>
+            {
+                entity.Property(e => e.PhotoName).IsRequired().HasMaxLength(100);
+                entity.Property(e => e.Description).IsRequired().HasMaxLength(500);
+                entity.Property(e => e.UploadDate).IsRequired();
+                entity.Property(e => e.FilePath).IsRequired().HasMaxLength(255);
+                entity.Property(e => e.AlbumId).IsRequired();
+                entity.Property(e => e.UserId).IsRequired();
+            });
+
+            // 测试数据
+            modelBuilder.Entity<Users>().HasData(
+                new Users { Id = 1, UserName = "Justin", Email = "hapopo35@gmail.com", Password = "a1", RegistrationDate = DateTime.Now },
+                new Users { Id = 2, UserName = "Milly", Email = "user2@example.com", Password = "a2", RegistrationDate = DateTime.Now },
+                new Users { Id = 3, UserName = "Lucy", Email = "user3@example.com", Password = "a3", RegistrationDate = DateTime.Now }
+            );
+
+            modelBuilder.Entity<Albums>().HasData(
+    new Albums { Id = 1, AlbumName = "相簿1", Description = "相簿描述", CreationDate = DateTime.Now, UserId = 1, PhotoCount = 5 },
+    new Albums { Id = 2, AlbumName = "相簿2", Description = "相簿描述", CreationDate = DateTime.Now, UserId = 2, PhotoCount = 1 },
+    new Albums { Id = 3, AlbumName = "相簿3", Description = "相簿描述", CreationDate = DateTime.Now, UserId = 3, PhotoCount = 1 }
+);
+
+
+            modelBuilder.Entity<Photos>().HasData(
+                new Photos { Id = 1, PhotoName = "photo1", Description = "photo1 description", UploadDate = DateTime.Now, FilePath = "img1.jpg", AlbumId = 1, UserId = 1 },
+                new Photos { Id = 2, PhotoName = "photo2", Description = "photo2 description", UploadDate = DateTime.Now, FilePath = "img2.jpg", AlbumId = 2, UserId = 2 },
+                new Photos { Id = 3, PhotoName = "photo3", Description = "photo3 description", UploadDate = DateTime.Now, FilePath = "img3.jpg", AlbumId = 3, UserId = 3 },
+                new Photos { Id = 4, PhotoName = "photo4", Description = "photo3 description", UploadDate = DateTime.Now, FilePath = "img4.jpg", AlbumId = 1, UserId = 1 },
+                new Photos { Id = 5, PhotoName = "photo5", Description = "photo3 description", UploadDate = DateTime.Now, FilePath = "img5.jpg", AlbumId = 1, UserId = 1 },
+                new Photos { Id = 6, PhotoName = "photo6", Description = "photo3 description", UploadDate = DateTime.Now, FilePath = "img6.jpg", AlbumId = 1, UserId = 1 },
+                new Photos { Id = 7, PhotoName = "photo7", Description = "photo3 description", UploadDate = DateTime.Now, FilePath = "img7.jpg", AlbumId = 1, UserId = 1 }
+            );
         }
     }
 }
+

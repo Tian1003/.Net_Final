@@ -4,21 +4,25 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-<div class="carousel-inner">
-@{
-int x = 0;
-foreach (var item in Model.ImgList)
-{
-if (x == 0)
-{
-<div class="carousel-item active" data-bs-interval="10000">
-<img src='@Url.Content("~/images/"+item.ImgF)' class="d-block w-100" alt="...">
-</div>
-}
+    <div class="carousel-inner">
+        @{
+            int x = 0;
+            foreach (var item in Model.ImgList)
+            {
+                if (x == 0)
+                {
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <a href="@Url.Action("Detail", "Image", new { id = item.Id })">
+                            <img src='@Url.Content("~/images/" + item.ImgF)' class="d-block w-100" alt="...">
+                        </a>
+                    </div>
+                }
                 else
                 {
                     <div class="carousel-item" data-bs-interval="2000">
-                        <img src='@Url.Content("~/images/"+item.ImgF)' class="d-block w-100" alt="...">
+                        <a href="@Url.Action("Detail", "Image", new { id = item.Id })">
+                            <img src='@Url.Content("~/images/" + item.ImgF)' class="d-block w-100" alt="...">
+                        </a>
                     </div>
                 }
                 x++;

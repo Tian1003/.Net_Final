@@ -1,0 +1,107 @@
+﻿@model s1110834035_NetFinal.ViewModels.PhotographVM
+@{
+    ViewData["Title"] = "photograph";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>依類別顯示產品</h2>
+<div style="margin-top:3%;" class="row">
+    <div class="col-md-3">
+        <h4>我的相簿</h4><hr />
+        @foreach (var item in Model.AlbumList)
+        {
+            <p>
+                <a href="@Url.Action("photograph", new { cid = item.Id })">@item.AlbumName </a>
+            </p>
+        }
+
+        <p>
+            <a href="@Url.Action("CreateAlbum")" class="btn btn-success">新增相簿</a>
+        </p>
+    </div>
+
+    <div class="row col-md-9 g-0">
+        @if (Model.PhotoList.Count() > 0)
+        {
+            foreach (var item in Model.PhotoList)
+            {
+                <div class="col-sm-12 col-md-6 col-xl-4">
+                    <div class="card" style="position: relative; overflow: hidden;">
+                        <img src="@Url.Content("~/images/" + item.FilePath)" class="card-img-top" style="width: 100%;">
+                        <div class="card-body overlay">
+                            <h3>@item.PhotoName</h3>
+                            <p>作者: @item.UserId</p>
+                            <p class="date">上傳日期: @item.UploadDate</p>
+                            <div class="btn-group">
+                                @Html.ActionLink("修改", "Edit", new { pid = item.Id }, new { @class = "btn btn-primary" })
+                                @Html.ActionLink("刪除", "Delete", new { pid = item.Id, cid = item.Id }, new { @class = "btn btn-danger" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <div class="col-md-12">
+                <p class="text-center">資料庫內查無資料</p>
+            </div>
+        }
+
+        <div class="col-sm-12 col-md-6 col-xl-4">
+            <div class="card add-photo-card" style="position: relative; overflow: hidden; background-color: white; text-align: center; display: flex; align-items: center; justify-content: center; height: 100%;">
+                <a href="@Url.Action("Create", new { cid = Model.SrhId })" class="add-photo-link" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-decoration: none;">
+                    <span class="plus-sign" style="font-size: 48px; color: black;">+</span>
+
+                    <div class="add-photo-body overlay">
+                        <p>新增相片</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .card-body {
+        position: absolute;
+        bottom: -110%;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.75); /* 半透明背景 */
+        color: white; /* 文字颜色 */
+        padding: 20px;
+        transition: bottom 0.4s ease-in-out;
+        font-weight: bold;
+    }
+
+    .card:hover .card-body {
+        bottom: 0;
+    }
+
+    .add-photo-card:hover {
+        background-color: black;
+    }
+
+        .add-photo-card:hover .plus-sign {
+            color: white;
+        }
+
+    .add-photo-body {
+        position: absolute;
+        bottom: -120%; /* Make this slightly more than others */
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.75);
+        color: white;
+        padding: 20px;
+        transition: bottom 0.4s ease-in-out;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .add-photo-card:hover .add-photo-body {
+        bottom: 0;
+    }
+</style>

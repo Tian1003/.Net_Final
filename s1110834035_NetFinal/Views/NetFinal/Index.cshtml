@@ -3,6 +3,7 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
         @{
@@ -13,20 +14,26 @@
                 {
                     <div class="carousel-item active" data-bs-interval="10000">
                         <img src='@Url.Content("~/images/"+item.ImgF)' class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>守護您的信賴</h3>
+                            <p>熱血工作者，做客戶的堅強後盾，服務一步到位</p>
+                        </div>
                     </div>
                 }
                 else
                 {
                     <div class="carousel-item" data-bs-interval="2000">
                         <img src='@Url.Content("~/images/"+item.ImgF)' class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>廉價建霖 您最佳的選擇</h3>
+                            <p>後製包含瑕疵處理、調色、修片、去背、轉檔...等</p>
+                        </div>
                     </div>
                 }
                 x++;
             }
         }
     </div>
-
-    
 
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -36,30 +43,23 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
     </button>
-
-
-    <div class="row">
-        @if (!Model.ProductList.Count().Equals(0))
-        {
-            foreach (var item in Model.ProductList)
-            {
-                <div class="col-sm-6 col-md-4 col-xl-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="@Url.Content("~/images/"+item.ImgF)">
-                        <div class="card-body">
-                            <h3>@item.Name</h3>
-                            <p>@item.Price</p>
-                            <p>@item.Description</p>
-                            <p>
-                                <a href="#" target="_blank" class="btn btn-primary" role="button">Button</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            }
-        }
-    </div>
-
-
 </div>
 
+<div class="row justify-content-center g-0">
+    @if (Model.PhotoList.Count() > 0)
+    {
+        foreach (var item in Model.PhotoList)
+        {
+            <div class="col-sm-6 col-md-4 col-xl-4">
+                <div class="card" style="position: relative; overflow: hidden;">
+                    <img src="@Url.Content("~/images/" + item.FilePath)" class="card-img-top" style="width: 100%;">
+                    <div class="card-body overlay">
+                        <h3>@item.PhotoName</h3>
+                        <p>作者: @item.UserId</p>
+                        <p class="date">上傳日期: @item.UploadDate</p>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+</div>

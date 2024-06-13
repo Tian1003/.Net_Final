@@ -1,4 +1,4 @@
-html {
+﻿html {
   font-size: 14px;
 }
 
@@ -18,5 +18,29 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    background: #bdc3c7; /* fallback for old browsers */
+    
+    padding-bottom: 100px; /* Adjust according to your footer's height */
+}
+
+.card-body {
+    position: absolute;
+    bottom: -110%;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.75); /* 半透明背景 */
+    color: white; /* 文字颜色 */
+    padding: 20px;
+    transition: bottom 0.4s ease-in-out;
+    font-weight: bold;
+}
+
+.card:hover .card-body {
+    bottom: 0;
+}
+
+.date {
+    color: lightgray;
 }

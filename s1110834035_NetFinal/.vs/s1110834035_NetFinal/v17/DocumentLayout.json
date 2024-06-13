@@ -3,32 +3,36 @@
   "WorkspaceRootPath": "C:\\.Net\\Final\\s1110834035_NetFinal\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8388A59C-33B1-40C3-BB40-5BB6E224B81E}|s1110834035_NetFinal.csproj|c:\\.net\\final\\s1110834035_netfinal\\services\\photographservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8388A59C-33B1-40C3-BB40-5BB6E224B81E}|s1110834035_NetFinal.csproj|solutionrelative:services\\photographservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8388A59C-33B1-40C3-BB40-5BB6E224B81E}|s1110834035_NetFinal.csproj|c:\\.net\\final\\s1110834035_netfinal\\controllers\\netfinal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8388A59C-33B1-40C3-BB40-5BB6E224B81E}|s1110834035_NetFinal.csproj|solutionrelative:controllers\\netfinal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8388A59C-33B1-40C3-BB40-5BB6E224B81E}|s1110834035_NetFinal.csproj|c:\\.net\\final\\s1110834035_netfinal\\services\\catprodbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8388A59C-33B1-40C3-BB40-5BB6E224B81E}|s1110834035_NetFinal.csproj|solutionrelative:services\\catprodbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8388A59C-33B1-40C3-BB40-5BB6E224B81E}|s1110834035_NetFinal.csproj|c:\\.net\\final\\s1110834035_netfinal\\views\\netfinal\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8388A59C-33B1-40C3-BB40-5BB6E224B81E}|s1110834035_NetFinal.csproj|solutionrelative:views\\netfinal\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8388A59C-33B1-40C3-BB40-5BB6E224B81E}|s1110834035_NetFinal.csproj|c:\\.net\\final\\s1110834035_netfinal\\wwwroot\\css\\catpronew.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{8388A59C-33B1-40C3-BB40-5BB6E224B81E}|s1110834035_NetFinal.csproj|solutionrelative:wwwroot\\css\\catpronew.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{8388A59C-33B1-40C3-BB40-5BB6E224B81E}|s1110834035_NetFinal.csproj|c:\\.net\\final\\s1110834035_netfinal\\views\\netfinal\\createalbum.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8388A59C-33B1-40C3-BB40-5BB6E224B81E}|s1110834035_NetFinal.csproj|solutionrelative:views\\netfinal\\createalbum.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8388A59C-33B1-40C3-BB40-5BB6E224B81E}|s1110834035_NetFinal.csproj|c:\\.net\\final\\s1110834035_netfinal\\views\\netfinal\\catpronew.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8388A59C-33B1-40C3-BB40-5BB6E224B81E}|s1110834035_NetFinal.csproj|solutionrelative:views\\netfinal\\catpronew.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8388A59C-33B1-40C3-BB40-5BB6E224B81E}|s1110834035_NetFinal.csproj|c:\\.net\\final\\s1110834035_netfinal\\models\\photos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8388A59C-33B1-40C3-BB40-5BB6E224B81E}|s1110834035_NetFinal.csproj|solutionrelative:models\\photos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8388A59C-33B1-40C3-BB40-5BB6E224B81E}|s1110834035_NetFinal.csproj|c:\\.net\\final\\s1110834035_netfinal\\models\\albums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8388A59C-33B1-40C3-BB40-5BB6E224B81E}|s1110834035_NetFinal.csproj|solutionrelative:models\\albums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8388A59C-33B1-40C3-BB40-5BB6E224B81E}|s1110834035_NetFinal.csproj|c:\\.net\\final\\s1110834035_netfinal\\views\\netfinal\\photograph.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8388A59C-33B1-40C3-BB40-5BB6E224B81E}|s1110834035_NetFinal.csproj|solutionrelative:views\\netfinal\\photograph.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8388A59C-33B1-40C3-BB40-5BB6E224B81E}|s1110834035_NetFinal.csproj|c:\\.net\\final\\s1110834035_netfinal\\views\\netfinal\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8388A59C-33B1-40C3-BB40-5BB6E224B81E}|s1110834035_NetFinal.csproj|solutionrelative:views\\netfinal\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8388A59C-33B1-40C3-BB40-5BB6E224B81E}|s1110834035_NetFinal.csproj|c:\\.net\\final\\s1110834035_netfinal\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{8388A59C-33B1-40C3-BB40-5BB6E224B81E}|s1110834035_NetFinal.csproj|solutionrelative:wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8388A59C-33B1-40C3-BB40-5BB6E224B81E}|s1110834035_NetFinal.csproj|c:\\.net\\final\\s1110834035_netfinal\\viewmodels\\catprovm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8388A59C-33B1-40C3-BB40-5BB6E224B81E}|s1110834035_NetFinal.csproj|solutionrelative:viewmodels\\catprovm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,97 +42,115 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "NetFinal.cs",
-              "DocumentMoniker": "C:\\.Net\\Final\\s1110834035_NetFinal\\Controllers\\NetFinal.cs",
-              "RelativeDocumentMoniker": "Controllers\\NetFinal.cs",
-              "ToolTip": "C:\\.Net\\Final\\s1110834035_NetFinal\\Controllers\\NetFinal.cs",
-              "RelativeToolTip": "Controllers\\NetFinal.cs",
-              "ViewState": "AQIAAEsAAAAAAAAAAAAiwE4AAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T14:15:46.593Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "site.js",
-              "DocumentMoniker": "C:\\.Net\\Final\\s1110834035_NetFinal\\wwwroot\\js\\site.js",
-              "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
-              "ToolTip": "C:\\.Net\\Final\\s1110834035_NetFinal\\wwwroot\\js\\site.js",
-              "RelativeToolTip": "wwwroot\\js\\site.js",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAowBAAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-06-03T17:20:43.477Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\.Net\\Final\\s1110834035_NetFinal\\Views\\NetFinal\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Views\\NetFinal\\Edit.cshtml",
-              "ToolTip": "C:\\.Net\\Final\\s1110834035_NetFinal\\Views\\NetFinal\\Edit.cshtml",
-              "RelativeToolTip": "Views\\NetFinal\\Edit.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAkAAAA",
+              "DocumentIndex": 6,
+              "Title": "photograph.cshtml",
+              "DocumentMoniker": "C:\\.Net\\Final\\s1110834035_NetFinal\\Views\\NetFinal\\photograph.cshtml",
+              "RelativeDocumentMoniker": "Views\\NetFinal\\photograph.cshtml",
+              "ToolTip": "C:\\.Net\\Final\\s1110834035_NetFinal\\Views\\NetFinal\\photograph.cshtml",
+              "RelativeToolTip": "Views\\NetFinal\\photograph.cshtml",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAmwGsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-03T17:19:33.7Z",
+              "WhenOpened": "2024-06-13T15:10:25.377Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "CatProNew.cshtml",
-              "DocumentMoniker": "C:\\.Net\\Final\\s1110834035_NetFinal\\Views\\NetFinal\\CatProNew.cshtml",
-              "RelativeDocumentMoniker": "Views\\NetFinal\\CatProNew.cshtml",
-              "ToolTip": "C:\\.Net\\Final\\s1110834035_NetFinal\\Views\\NetFinal\\CatProNew.cshtml",
-              "RelativeToolTip": "Views\\NetFinal\\CatProNew.cshtml",
-              "ViewState": "AQIAACUAAAAAAAAAAIAwwDUAAAA/AAAA",
+              "Title": "CreateAlbum.cshtml",
+              "DocumentMoniker": "C:\\.Net\\Final\\s1110834035_NetFinal\\Views\\NetFinal\\CreateAlbum.cshtml",
+              "RelativeDocumentMoniker": "Views\\NetFinal\\CreateAlbum.cshtml",
+              "ToolTip": "C:\\.Net\\Final\\s1110834035_NetFinal\\Views\\NetFinal\\CreateAlbum.cshtml",
+              "RelativeToolTip": "Views\\NetFinal\\CreateAlbum.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-03T16:31:06.007Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CatProNew.css",
-              "DocumentMoniker": "C:\\.Net\\Final\\s1110834035_NetFinal\\wwwroot\\css\\CatProNew.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\CatProNew.css",
-              "ToolTip": "C:\\.Net\\Final\\s1110834035_NetFinal\\wwwroot\\css\\CatProNew.css",
-              "RelativeToolTip": "wwwroot\\css\\CatProNew.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-06-03T16:28:35.957Z",
+              "WhenOpened": "2024-06-13T15:26:15.719Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CatProDBService.cs",
-              "DocumentMoniker": "C:\\.Net\\Final\\s1110834035_NetFinal\\Services\\CatProDBService.cs",
-              "RelativeDocumentMoniker": "Services\\CatProDBService.cs",
-              "ToolTip": "C:\\.Net\\Final\\s1110834035_NetFinal\\Services\\CatProDBService.cs",
-              "RelativeToolTip": "Services\\CatProDBService.cs",
-              "ViewState": "AQIAAHwAAAAAAAAAAAAAAI0AAAAtAAAA",
+              "Title": "NetFinal.cs",
+              "DocumentMoniker": "C:\\.Net\\Final\\s1110834035_NetFinal\\Controllers\\NetFinal.cs",
+              "RelativeDocumentMoniker": "Controllers\\NetFinal.cs",
+              "ToolTip": "C:\\.Net\\Final\\s1110834035_NetFinal\\Controllers\\NetFinal.cs",
+              "RelativeToolTip": "Controllers\\NetFinal.cs",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAmwEEAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T09:59:19.22Z",
+              "WhenOpened": "2024-06-13T15:10:30.854Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CatProVM.cs",
-              "DocumentMoniker": "C:\\.Net\\Final\\s1110834035_NetFinal\\ViewModels\\CatProVM.cs",
-              "RelativeDocumentMoniker": "ViewModels\\CatProVM.cs",
-              "ToolTip": "C:\\.Net\\Final\\s1110834035_NetFinal\\ViewModels\\CatProVM.cs",
-              "RelativeToolTip": "ViewModels\\CatProVM.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "DocumentIndex": 0,
+              "Title": "PhotoGraphService.cs",
+              "DocumentMoniker": "C:\\.Net\\Final\\s1110834035_NetFinal\\Services\\PhotoGraphService.cs",
+              "RelativeDocumentMoniker": "Services\\PhotoGraphService.cs",
+              "ToolTip": "C:\\.Net\\Final\\s1110834035_NetFinal\\Services\\PhotoGraphService.cs",
+              "RelativeToolTip": "Services\\PhotoGraphService.cs",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAwwEsAAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T11:06:04.473Z",
+              "WhenOpened": "2024-06-13T15:10:18.932Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\.Net\\Final\\s1110834035_NetFinal\\Views\\NetFinal\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\NetFinal\\Create.cshtml",
+              "ToolTip": "C:\\.Net\\Final\\s1110834035_NetFinal\\Views\\NetFinal\\Create.cshtml",
+              "RelativeToolTip": "Views\\NetFinal\\Create.cshtml",
+              "ViewState": "AQIAABYAAAAAAAAAAAAAACsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-13T15:54:29.22Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Photos.cs",
+              "DocumentMoniker": "C:\\.Net\\Final\\s1110834035_NetFinal\\Models\\Photos.cs",
+              "RelativeDocumentMoniker": "Models\\Photos.cs",
+              "ToolTip": "C:\\.Net\\Final\\s1110834035_NetFinal\\Models\\Photos.cs",
+              "RelativeToolTip": "Models\\Photos.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAADwvxkAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T16:31:24.258Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Albums.cs",
+              "DocumentMoniker": "C:\\.Net\\Final\\s1110834035_NetFinal\\Models\\Albums.cs",
+              "RelativeDocumentMoniker": "Models\\Albums.cs",
+              "ToolTip": "C:\\.Net\\Final\\s1110834035_NetFinal\\Models\\Albums.cs",
+              "RelativeToolTip": "Models\\Albums.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T15:38:29.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\.Net\\Final\\s1110834035_NetFinal\\Views\\NetFinal\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\NetFinal\\Edit.cshtml",
+              "ToolTip": "C:\\.Net\\Final\\s1110834035_NetFinal\\Views\\NetFinal\\Edit.cshtml",
+              "RelativeToolTip": "Views\\NetFinal\\Edit.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-13T15:28:35.54Z",
               "EditorCaption": ""
             }
           ]

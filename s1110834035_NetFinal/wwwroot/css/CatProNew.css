@@ -1,4 +1,7 @@
-﻿body {
+﻿
+body {
+    background-color: #f0f0f0;
+    padding-bottom: 100px; /* Adjust according to your footer's height */
 }
 
 h2 {
@@ -19,4 +22,46 @@ h4 {
     border: 1px dotted #94c8b1;
     border -left: 10px solid #d0e35b;
     color: #6fbb9a;
+}
+
+
+.btn-group-center {
+    display: flex;
+    justify-content: center;
+}
+
+    .btn-group-center .btn {
+        width: 200px;
+        height: 60px;
+        margin: 5px;
+        border: none; /* Remove border */
+        font-weight: bold; /* Set font weight to bold */
+    }
+
+        .btn-group-center .btn:nth-child(1) {
+            background-color: #3FA66E;
+        }
+
+        .btn-group-center .btn:nth-child(2) {
+            background-color: #31364A;
+        }
+
+        .btn-group-center .btn:nth-child(3) {
+            background-color: #95C599;
+        }
+
+        .btn-group-center .btn:nth-child(4) {
+            background-color: #2B401D;
+        }
+
+/* Custom CSS for About Us section */
+.about-us-section {
+    font-weight: bold; /* Set font weight to bold */
+}
+
+/* Custom CSS for carousel caption */
+.carousel-caption h3,
+.carousel-caption p {
+    color: white; /* Set text color to white */
+    font-weight: bolder; /* Set font weight to bold */
 }
